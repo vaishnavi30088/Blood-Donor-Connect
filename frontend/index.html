@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Donor & Finder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <button onclick="showPage('home')">Home</button>
+        <button onclick="showPage('register')">Register</button>
+        <button onclick="showPage('login')">Login</button>
+        <button onclick="showPage('donor')">Register as Donor</button>
+        <button onclick="showPage('donors')">View Donors</button>
+    </nav>
+
+    <!-- Home Page -->
+    <section id="home">
+        <h1>Welcome to Blood Donor Finder</h1>
+        <p>Select an option from the menu.</p>
+    </section>
+
+    <!-- Register Page -->
+    <section id="register" class="hidden">
+        <h2>Register</h2>
+        <form id="registerForm">
+            <input type="text" id="regUsername" placeholder="Username" required>
+            <input type="password" id="regPassword" placeholder="Password" required>
+            <button type="submit">Register</button>
+        </form>
+    </section>
+
+    <!-- Login Page -->
+    <section id="login" class="hidden">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <input type="text" id="loginUsername" placeholder="Username" required>
+            <input type="password" id="loginPassword" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </section>
+
+    <!-- Donor Registration -->
+    <section id="donor" class="hidden">
+        <h2>Register as a Donor</h2>
+        <form id="donorForm">
+            <input type="text" id="donorName" placeholder="Full Name" required>
+            <input type="text" id="donorBloodType" placeholder="Blood Type (e.g. A+)" required>
+            <input type="text" id="donorLocation" placeholder="Location" required>
+            <input type="text" id="donorPhone" placeholder="Phone Number" required>
+            <button type="submit">Register Donor</button>
+        </form>
+    </section>
+
+    <!-- Donors List -->
+    <section id="donors" class="hidden">
+        <h2>Available Donors</h2>
+        <button id="getDonors">Get Donors</button>
+        <ul id="donorsList"></ul>
+    </section>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
